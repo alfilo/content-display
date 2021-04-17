@@ -493,7 +493,7 @@ function ContentDisplay(content, idKeys, opts) {
                 var $categoryUl = $('#' + categoryId);
                 // If we haven't seen this category yet, create an image of this item
                 // and pop-up text (header & link list)
-                if ($categoryUl.length === 0) {
+                if (!$categoryUl.length) {
                     $categoryUl = $("<ul>").attr("id", categoryId);
                     // Make only one image
                     var $img = makeImgs(content[i], imgHandlingEnum.FIRST)
